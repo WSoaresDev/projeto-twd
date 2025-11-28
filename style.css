@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 * {
     margin: 0;
     padding: 0;
@@ -8,42 +7,53 @@
 }
 
 body {
-    background-color: black;
+    background-color: rgb(34, 23, 24);
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#cabecalho {
-    height: 25vh;
+header, main, footer {
+    max-width: 1000px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
+#cabecalho {
+    height: 60vh; 
     background-image: url(imagens/imagem-header.jpg);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
 }
 
 #cabecalho h1 {
-    color: white;
+    color: rgb(192, 180, 180);
     text-align: center;
-    padding-top: 20%;
-    font-size: 2.5em;
+    font-size: 3em;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.322);
+    border-radius: 7px;
 }
-
 
 article > p {
     background-color: white;
     color: black;
-    padding: 10px 25px;
-    font-size: 1.5em;
-    line-height: 1.5em;
+    padding: 20px 25px; 
+    font-size: 1.2em; 
+    line-height: 1.6em;
     text-indent: 25px;
 }
 
 .titulo-elenco > h2 {
     text-align: center;
     background-color: black;
-    font-size: 1.5em;
-    padding: 10px;
+    font-size: 1.8em;
+    padding: 30px 10px;
+    color: white;
 }
 
 .caixa-texto h3 {
@@ -57,18 +67,18 @@ article > p {
     font-size: 1.1em;
 }
 
-#rick, #carl, #maggie {
+#rick, #carl, #maggie, #daryl {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-
-    height: 40vh;
+    background-size: cover; 
+    height: 40vh; 
     display: flex;
     align-items: center; 
     justify-content: center; 
     padding: 20px 0;
 }
+
 #rick {
     background-image: url(imagens/rick-2.jpg)
 }
@@ -79,29 +89,19 @@ article > p {
 
 #daryl {
     background-image: url(imagens/daryl3.jpg); 
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    height: 40vh;
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
-    padding: 20px 0;
 }
 
 #maggie {
     background-image: url(imagens/maggie.jpg); 
 }
+
 .caixa-texto {
-    background: rgba(0, 0, 0, 0.425); 
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 500px; 
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 25px;
+    border-radius: 5px;
+    max-width: 450px; 
     text-align: center;
 }
-
 
 footer {
     padding: 20px;
@@ -124,5 +124,31 @@ a:hover {
     padding: 7px;
     border-radius: 6px;
     background-color: darkgray;
-    transition: 3s;
+    transition: 0.3s;
+}
+
+@media (max-width: 700px) {
+    #cabecalho h1 {
+        font-size: 2.5em;
+    }
+    
+    article > p {
+        font-size: 1.1em;
+        padding: 15px 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    #cabecalho {
+        height: 40vh;
+    }
+    
+    #rick, #carl, #daryl, #maggie {
+        height: 30vh; 
+    }
+    
+    .caixa-texto {
+        max-width: 90%; 
+        padding: 15px;
+    }
 }
