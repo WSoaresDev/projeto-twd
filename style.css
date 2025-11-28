@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +8,121 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgray;
-}
-
-header {
-    background-image: url(imagens/imagem-header.jpg);
-    background-size: cover;
     background-color: black;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#cabecalho {
+    height: 25vh;
+
+    background-image: url(imagens/imagem-header.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cabecalho h1 {
+    color: white;
     text-align: center;
-    padding: 8vh;
+    padding-top: 20%;
+    font-size: 2.5em;
+}
+
+
+article > p {
+    background-color: white;
+    color: black;
+    padding: 10px 25px;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    text-indent: 25px;
+}
+
+.titulo-elenco > h2 {
+    text-align: center;
+    background-color: black;
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+.caixa-texto h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ff9900;
+}
+
+.caixa-texto p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+#rick, #carl, #maggie {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 40vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px 0;
+}
+#rick {
+    background-image: url(imagens/rick-2.jpg)
+}
+
+#carl {
+    background-image: url(imagens/carl3.webp);
+}
+
+#daryl {
+    background-image: url(imagens/daryl3.jpg); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 40vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px 0;
+}
+
+#maggie {
+    background-image: url(imagens/maggie.jpg); 
+}
+.caixa-texto {
+    background: rgba(0, 0, 0, 0.425); 
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px; 
+    text-align: center;
+}
+
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #111;
+}
+
+footer > p {
+    color: lightgray;
+}
+
+footer > p > a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    padding: 7px;
+    border-radius: 6px;
+    background-color: darkgray;
+    transition: 3s;
 }
